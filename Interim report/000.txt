@@ -1,0 +1,90 @@
+	/*
+		num4 = (-1)* length*angular_accelerate_1*cos((angle_2 - angle_1)*rad);
+		num5 = (-1)* length*angle_speed_1*angle_speed_1*sin((angle_2 - angle_1)*rad);
+		num6 = (-1)*g*sin(angle_2*rad);
+		num7 = length_2;
+		angular_accelerate_2 = (num4 + num5 + num6) / num7;
+		*/
+
+
+		/*
+		num0 = (-1)*m2*length_2*angular_accelerate_2*angular_accelerate_2*cos((angle_2 - angle_1)*rad);
+		num1 = m2 * length_2*angle_speed_2*angle_speed_2*sin((angle_speed_2 - angle_1)*rad);
+		num2 = (-1)*(m1 + m2)*g*sin(angle_1*rad);
+		num3 = (-1)*(m1 + m2)*length;
+		angular_accelerate_1 = (num0 + num1 + num2) / num3;
+		*/
+		
+		
+		num1 = (-g)*(2 * m1 + m2)*sin(angle_1);
+		num2 = m2 * g*sin((angle_1 - (2 * angle_2)));
+		num3 = 2 * sin(angle_1 - angle_2)*m2*(angle_speed_2*angle_speed_2*length_2 + angle_speed_1 * angle_speed_1*cos(angle_1 - angle_2));
+		divition=((2 * m1) + m2 - (m2 * cos(2*angle_1-2*angle_2)));
+		if (divition)
+			angular_accelerate_1 = (num1 - num2 - num3) / (length*divition);
+		else
+			angular_accelerate_1 = 0;
+		
+		
+		
+		/*
+		num4 = 2 * sin((angle_1 - angle_2)*rad);
+		num5 = angle_speed_1 * angle_speed_1*length*(m1 + m2);
+		num6 = g * (m1 + m2)*cos(angle_1*rad);
+		num7 = shift_angle_2 * shift_angle_2*length_2*m2*cos((angle_1 - angle_2)*rad);
+		if (divition)
+			angular_accelerate_2 = (num4*num5 + num6 + num7) / (length_2*divition);
+		else
+			angular_accelerate_2 = 0;
+		*/
+		
+		
+		printf("angle_1 %4f	angle_speed_1=  %4f	angular_accelerate_1= %4f\n", angle_1, angle_speed_1, angular_accelerate_1);
+		printf("angle_2 %4f	angle_speed_2=  %4f	angular_accelerate_2= %4f\n", angle_2, angle_speed_2, angular_accelerate_2);
+
+
+		if ((angular_accelerate_2 < -100000) || (angular_accelerate_2 > 100000))
+			system("pause");
+		if ((angular_accelerate_1 < -100000) || (angular_accelerate_1 > 100000))
+			system("pause");
+		/*
+		angle_speed_1 += angular_accelerate_1 * time_slope;
+		shift_angle_1 = angle_speed_1* time_slope +0.5*angular_accelerate_1* time_slope* time_slope;	
+		angle_1 += shift_angle_1;
+		*/
+
+	
+		angle_speed_1 += angular_accelerate_1;
+		angle_speed_1 = angle_speed_1 * 0.9999;
+		angle_1 += angle_speed_1;
+		
+
+
+		angle_1 = angle_1 / rad;
+		angle_2 = angle_1;
+		//----- To prevent angle value is too large to represent by computer-----------//
+		while (angle_1 > 180)
+			angle_1 = angle_1 - 360;
+		while (angle_1 <= -180)
+			angle_1 = angle_1 + 360;
+
+		//--------calculate the angle_2 now-------------//
+		/*
+		angle_speed_2 += angular_accelerate_2 * time_slope;
+		shift_angle_2 = angle_speed_2*time_slope+0.5*angular_accelerate_2*time_slope*time_slope;
+		
+		angle_2 += shift_angle_2;
+		*/
+		
+
+		/*
+		angle_speed_2 += angular_accelerate_2;
+		angle_speed_2 = angle_speed_2 * 0.9999;
+		angle_2 += angle_speed_2;
+		*/
+		while (angle_2 >= 180)
+			angle_2 =  angle_2-360;
+		while (angle_2 < -180)
+			angle_2 = angle_2+360;
+		
+		

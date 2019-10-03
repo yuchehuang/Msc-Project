@@ -1,0 +1,82 @@
+#include<math.h>
+#include "CImg.h"
+#define PI 3.14159265
+#define rad PI/180
+#define g	9.8		//gravity
+#define time_slope  0.01
+#define length 1	//unit: m
+#define length_2  1	//unit: m
+#define m1  1   // unit: Kg
+#define m2  1  // unit: Kg
+using namespace cimg_library;
+
+int main()
+{
+	int size_x = 640;
+	int size_y = 500;
+	int size_z = 1;
+	int numberOfColorChannels = 3; // R G B
+	unsigned char initialValue = 0;
+	//-------define the image and window-------------------------//
+	CImg<unsigned char> blank(size_x, size_y, size_z, numberOfColorChannels, initialValue), paper;
+	CImgDisplay disp(blank, "Pendulum");
+
+
+	//----------------Variable define-----------------------------//
+	const unsigned char color_circle[] = { 250, 100, 0 }, white[] = { 255,255,255 }, color_car[] = { 255, 255, 0 };
+	float x = disp.width() / 2, y = 0 ,x2=0,y2=0;
+	float angle_degree_1 = 180, shift_angle_1=0, angle_speed_1 = 0, angular_accelerate_1=0;
+	float angle_degree_2 = 179, shift_angle_2=0, angle_speed_2 = 0, angular_accelerate_2=0;
+	float angle_1 = angle_degree_1 * rad;
+	float angle_2 = angle_degree_2 * rad;
+	//-------------------------------------------------------------//
+	while (!disp.is_closed() && !disp.is_keyQ() && !disp.is_keyESC())
+	{
+		
+	//----------------- acceleration calculation--------------------------//
+		angular_accelerate_1 = (((-g)*(2 * m1 + m2)*sin(angle_1)) - (m2*g*sin(angle_1 - 2 * angle_2)) - (2 * sin(angle_1 - angle_2)*m2*(angle_speed_2*angle_speed_2*length_2 + angle_speed_1 * angle_speed_1*length*cos(angle_1 - angle_2))))/(length*(2*m1+m2-m2*cos(2*angle_1-2*angle_2)));
+		angular_accelerate_2 = (2 * sin(angle_1 - angle_2)*(angle_speed_1*angle_speed_1*length*(m1 + m2) + g * (m1 + m2)*cos(angle_1) + angle_speed_2 * angle_speed_2*length_2*m2*cos(angle_1 - angle_2))) / (length_2*(2 * m1 + m2 - m2 * cos(2 * angle_1 - 2 * angle_2)));
+		
+		angle_speed_1 += angular_accelerate_1*time_slope;
+		angle_1 += angle_speed_1 * time_slope;
+		angle_speed_2 += angular_accelerate_2 * time_slope;
+		angle_2 += angle_speed_2 * time_slope;
+
+		while (angle_1 > PI)
+			angle_1 -= (2 * PI);
+		while (angle_1 <= -PI)
+			angle_1 += (2 * PI);
+
+		while (angle_2 > PI)
+			angle_2 -= (2 * PI);
+		while (angle_2 <= -PI)
+			angle_2 += (2 * PI);
+		
+		//--------------------------Graphing-------------------------------//
+		y = (disp.height() / 2) + 100 * length * cos(angle_1);
+		x = (disp.width() / 2) - 100 * length * sin(angle_1);
+		y2 = y + 100 * length_2 * cos(angle_2);
+		x2 = x - 100 * length_2 * sin(angle_2);
+
+		//----------------------------------------------------------------//
+
+		paper = blank;
+		paper.draw_rectangle((disp.width() / 2)-10,(disp.height() / 2)-10, (disp.width() / 2)+10, (disp.height() / 2)+10, color_car);
+		paper.draw_line(disp.width() / 2, disp.height() / 2, x, y, white);
+		paper.draw_ellipse(x, y, 10, 10, 0, color_circle);
+		paper.draw_line(x, y, x2, y2, white);
+		paper.draw_ellipse(x2, y2, 10, 10, 0, color_circle);
+		//-------------------------FPS------------------------------------//
+		disp.display(paper).wait(6);
+
+
+		//-------------------------Print Data------------------------------------//
+		printf("angle_1 %4f	angle_speed_1=  %4f	angular_accelerate_1= %4f\n", 180*(angle_1/PI), angle_speed_1, angular_accelerate_1);
+		printf("angle_2 %4f	angle_speed_2=  %4f	angular_accelerate_2= %4f\n", 180 * (angle_2 / PI), angle_speed_2, angular_accelerate_2);
+		//-------------------------Changing Windows size------------------------------------//
+		if (disp.is_resized())
+			blank.resize(disp.resize(disp.window_width() > 200 ? disp.window_width() : 200, disp.height(), false));
+	}
+
+	return 0;
+}
