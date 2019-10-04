@@ -1,0 +1,4 @@
+Smallest training punishment = -463 with 35 nodes & depth = 11
+ with test error = -463
+
+-((((x[5] - 5.1) + (2.0 + 2.6)) * (((((x[1] + -(AQ(-(6.6),(x[5] + 9.7)))) - AQ(x[3],8.4)) - 4.8) - 9.9) * (4.2 * (-(3.7) - (7.1 + 0.5))))))
