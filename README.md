@@ -47,15 +47,17 @@ The crossover is implemented by exchanging genetic material which is the subsect
 
 ### Evaluation
 
+```javascript
+double Reward(CColumnVector& stateVector )
+{
+    double arg = g_dThetaWeight * stateVector[1] * stateVector[1];
+    arg += g_dThetaWeight * stateVector[2] * stateVector[2];
+    arg += g_dVelocityWeight * stateVector[3] * stateVector[3];
+    arg += g_dVelocityWeight * stateVector[4] * stateVector[4];
+    arg += g_dDisplacementWeight * stateVector[5] * stateVector[5];
 
-`<double Reward(CColumnVector& stateVector )
-	{
-	double arg = g_dThetaWeight * stateVector[1] * stateVector[1];
-	arg += g_dThetaWeight * stateVector[2] * stateVector[2];
-	arg += g_dVelocityWeight * stateVector[3] * stateVector[3];
-	arg += g_dVelocityWeight * stateVector[4] * stateVector[4];
-	arg += g_dDisplacementWeight * stateVector[5] * stateVector[5];
-	return exp(-arg);
-	} // Reward()>`
+    return exp(-arg);
+} // Reward()
+```
 
 where stateVector is contained by angle_1 angle_2 angular_velocity_1 angular_velocity_2 cart_x
