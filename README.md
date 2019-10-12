@@ -47,6 +47,8 @@ The crossover is implemented by exchanging genetic material which is the subsect
 
 ### Evaluation
 
+Gaussian distribution function is exploited to offer gradient reward value based on the offer gradient reward value according to diverse state given by the dynamic system. The evaluated function is shown as following code where stateVector is ocmposed by angle_1 angle_2 angular_velocity_1 angular_velocity_2 and cart_x.
+
 ```javascript
 double Reward(CColumnVector& stateVector )
 {
@@ -60,4 +62,6 @@ double Reward(CColumnVector& stateVector )
 } // Reward()
 ```
 
-where stateVector is contained by angle_1 angle_2 angular_velocity_1 angular_velocity_2 cart_x
+### Evaluation
+
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Balancing%20result_.JPG) 
