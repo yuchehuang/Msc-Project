@@ -70,4 +70,4 @@ This work offers the evidence to prove that the non-Markov solution does provide
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/SwingUp%20task_.JPG) 
 
-![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20repor
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Balancing%20result_.JPG)
