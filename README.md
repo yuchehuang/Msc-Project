@@ -2,7 +2,7 @@
 
 * All code in this project is implemented by C++ by using [CImg](http://cimg.eu/) and [Gsl](https://www.gnu.org/software/gsl/) external libraries 
 * The simulation code of the pendulum movement is sohown in the [Code](https://github.com/yuchehuang/Msc-Project/tree/master/Code)  folder
-* The **detail information** of the project is demonstrated in the [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf) and [interim report](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Interim_cor18yh.pdf)
+* The **further information** of the project is demonstrated in the [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf) and [interim report](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Interim_cor18yh.pdf)
 
 * Due to some of the code is developed and belonged by the lab of University of Sheffield, this repositories **only provide the segment of the algorithm** which is available to illustrate the concept of the genetic algorithm  
 
