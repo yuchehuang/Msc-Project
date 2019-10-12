@@ -11,3 +11,8 @@ Reinforcement learning has been widely used for solving sequential decision task
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Simulation.png?raw=true)
 
 
+## Genetic programming
+
+The algorithm adopts a considerable candidate sequential control functions to enhance as an approximate solution by evaluating via the fitness function to simulate the phenomenon of evolution in the algorithm. The concept of evolutionary computation can be divided into three sections including: initialize, creating generation and evaluation.
+
+### Initialize
