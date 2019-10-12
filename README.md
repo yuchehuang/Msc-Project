@@ -64,7 +64,7 @@ double Reward(CColumnVector& stateVector )
 } // Reward()
 ```
 
-### Result
+## Result
 
 This work offers the evidence to prove that the non-Markov solution does provide an accurate performance with a smaller status tolerance and a shorter time used comparing with Markov one in the swing-up task. However, the strategy still generates a non-zero force to the cart even when the current status of pendulums is at the target position, due to it considers several previous statuses as the explicit inputs.
 
