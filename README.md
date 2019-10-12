@@ -55,7 +55,6 @@ The crossover is implemented by exchanging genetic material which is the subsect
 	arg += g_dVelocityWeight * stateVector[3] * stateVector[3];
 	arg += g_dVelocityWeight * stateVector[4] * stateVector[4];
 	arg += g_dDisplacementWeight * stateVector[5] * stateVector[5];
-
 	return exp(-arg);
 	} // Reward()>`
 
