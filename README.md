@@ -32,13 +32,17 @@ Initialization is the first step of the evolutionary algorithm which determines 
 ### Variation
 To diverse the candidate solutions and identify the approximate control formula, the genetic operators are employed in this algorithm to generate the next generation which keeps some of characteristic form parent’s candidate.
 
+The crossover is implemented by exchanging genetic material which is the subsection of the parent structure tree, from two or more current candidate solutions. On the other hand, comparing with the crossover, the mutation operator offers a function that only substituting a single individual genetic material by the subtree with a randomly created tree. By using these two genetic operators, it implements the simulation that each solution has a slightly different ability to adapt to the environment from others according to the evolution theory.
+
 * Crossover
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/crossover_.png) 
+
+
 
 * Mutation
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/mutation_.png) 
 
-The crossover is implemented by exchanging genetic material which is the subsection of the parent structure tree, from two or more current candidate solutions. On the other hand, comparing with the crossover, the mutation operator offers a function that only substituting a single individual genetic material by the subtree with a randomly created tree. By using these two genetic operators, it implements the simulation that each solution has a slightly different ability to adapt to the environment from others according to the evolution theory.
+
 
