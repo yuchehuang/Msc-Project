@@ -15,7 +15,7 @@ Reinforcement learning has been widely used for solving sequential decision task
 
 The algorithm adopts a considerable candidate sequential control functions to enhance as an approximate solution by evaluating via the fitness function to simulate the phenomenon of evolution in the algorithm. The concept of evolutionary computation can be divided into three sections including: initialize, creating generation and evaluation.
 
-### Initialize
+### Initialisation
 
 Initialization is the first step of the evolutionary algorithm which determines the critical parameter: maximum tree depth. The parameter is adopted for restricting the size of the initialized tree and consisted of two primary sets that including possible of terminals T and internal nodes I where T usually represent input value such as angle and angluar accelerator or other constant value, and I implies the operator of the  control function. Moreover,the structure of tree-based GP can be assembled by two common methodologies: grow method and full method.
 
@@ -45,4 +45,6 @@ The crossover is implemented by exchanging genetic material which is the subsect
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/mutation_.png) 
 
 
+### Evaluation
+`<addr>`
 
