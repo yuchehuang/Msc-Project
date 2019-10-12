@@ -22,10 +22,10 @@ Initialization is the first step of the evolutionary algorithm which determines 
 
 * _Grow method_
 
-![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Grow-tree.png?raw=true)
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/grow-tree.png)
 
 
 * _Full method_
 
-![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Full-tree.png?raw=true)
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/full-tree.png)
 
