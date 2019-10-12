@@ -9,5 +9,5 @@ Reinforcement learning has been widely used for solving sequential decision task
 * The detail information of the project is demonstrated in the IEEE report
 
 
-![alt text](https://raw.githubusercontent.com/yuchehuang/Msc-Project/master/Interim%20report/Capture.JPG)
+![alt text](https://raw.githubusercontent.com/yuchehuang/Msc-Project/master/Interim%20report/Capture.JPG =250x250)
 
