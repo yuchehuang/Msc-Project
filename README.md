@@ -6,7 +6,7 @@ Reinforcement learning has been widely used for solving sequential decision task
 
 * All code in this project is implemented by C++ by using [CImg](http://cimg.eu/) and [Gsl](https://www.gnu.org/software/gsl/) external library 
 * The simulation code of the pendulum movement is sohown in the code folder
-* The detail information of the project is demonstrated in the IEEE report and interim report
+* The detail information of the project is demonstrated in the [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf) and interim report
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Simulation.png?raw=true)
 
