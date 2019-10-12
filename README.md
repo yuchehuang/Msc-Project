@@ -6,7 +6,7 @@ Reinforcement learning has been widely used for solving sequential decision task
 
 * All code in this project is implemented by C++ by using [CImg](http://cimg.eu/) and [Gsl](https://www.gnu.org/software/gsl/) external library 
 * The simulation code of the pendulum movement is sohown in the code folder
-* **The detail information** of the project is demonstrated in the [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf) and [interim report](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Interim_cor18yh.pdf)
+* The **detail information** of the project is demonstrated in the [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf) and [interim report](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Interim_cor18yh.pdf)
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Simulation.png?raw=true)
 
@@ -62,6 +62,8 @@ double Reward(CColumnVector& stateVector )
 } // Reward()
 ```
 
-### Evaluation
+### Result
+
+This work offers the evidence to prove that non-Markov solution does provide an accurate performance with a smaller status tolerance and a shorter time used comparing with Markov one in swing-up task. However, the strategy still generates a non-zero force to the cart even when the current status of pendulums is at the target position, due to it considers several previous statuses as the explicit inputs.
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Balancing%20result_.JPG) 
