@@ -20,7 +20,12 @@ The algorithm adopts a considerable candidate sequential control functions to en
 Initialization is the first step of the evolutionary algorithm which determines the critical parameter: maximum tree depth. The parameter is adopted for restricting the size of the initialized tree and consisted of two primary sets that including possible of terminals T and internal nodes I where T usually represent input value such as angle and angluar accelerator or other constant value, and I implies the operator of the  control function. Moreover,the structure of tree-based GP can be assembled by two common methodologies: grow method and full method.
 
 
-*Grow method
+* Grow method
+
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Grow-tree.png?raw=true)
 
 
+* Full method
+
+![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Full-tree.png?raw=true)
 
