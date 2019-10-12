@@ -23,11 +23,11 @@ The algorithm adopts a considerable candidate sequential control functions to en
 Initialization is the first step of the evolutionary algorithm which determines the critical parameter: maximum tree depth. The parameter is adopted for restricting the size of the initialized tree and consisted of two primary sets that including possible of terminals T and internal nodes I where T usually represent input value such as angle and angular accelerator or other constant value, and I implies the operator of the control function. Moreover, the structure of tree-based GP can be assembled by two common methodologies: grow method and full method.
 
 
-* _Grow method_
+* **Grow method**
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/grow-tree.png) 
 
-* _Full method_ 
+* **Full method**
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/full-tree.png)
 
@@ -37,13 +37,13 @@ To diverse the candidate solutions and identify the approximate control formula,
 
 The crossover is implemented by exchanging genetic material which is the subsection of the parent structure tree, from two or more current candidate solutions. On the other hand, comparing with the crossover, the mutation operator offers a function that only substituting a single individual genetic material by the subtree with a randomly created tree. By using these two genetic operators, it implements the simulation that each solution has a slightly different ability to adapt to the environment from others according to the evolution theory.
 
-* Crossover
+* **Crossover**
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/crossover_.png) 
 
 
 
-* Mutation
+* **Mutation**
 
 ![alt text](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/mutation_.png) 
 
