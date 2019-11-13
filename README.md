@@ -1,4 +1,4 @@
-# Genetic programming in solving double pendulum problem
+# Genetic programming for solving double pendulum problem
 
 * This file is illustrated the brief concept of my Msc project. The **further theory and result**  is demonstrated in the [interim report](https://github.com/yuchehuang/Msc-Project/blob/master/Interim%20report/Interim_cor18yh.pdf) and [IEEE report](https://github.com/yuchehuang/Msc-Project/blob/master/IEEE%20report/cor18yh_IEEE%20_article.pdf).
 * All code in this project is implemented by C++ and using [CImg](http://cimg.eu/) and [Gsl](https://www.gnu.org/software/gsl/) external libraries to acheive.
